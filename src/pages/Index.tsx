@@ -56,6 +56,16 @@ const Index = () => {
       notes: ['Пачули', 'Мускус', 'Сандал'],
       image: 'https://cdn.poehali.dev/projects/019c344b-4df8-4481-9c5c-24e3db30b04c/files/875269cc-8c14-4fe1-bae7-bf2b03f715a6.jpg',
       type: 'Унисекс'
+    },
+    {
+      id: 4,
+      name: 'Purple Dream',
+      description: 'Изысканная композиция с фиалковыми нотами',
+      price: 13500,
+      samplePrice: 550,
+      notes: ['Фиалка', 'Ирис', 'Бергамот'],
+      image: 'https://cdn.poehali.dev/files/2cd21cdb-c421-43c4-a63a-841c51629a66.jpg',
+      type: 'Унисекс'
     }
   ];
 
@@ -319,8 +329,8 @@ const Index = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {perfumes.map((perfume) => (
-                <Card key={perfume.id} className="group overflow-hidden bg-card hover:bg-card/80 transition-all duration-300">
-                  <div className="aspect-[3/4] overflow-hidden">
+                <Card key={perfume.id} className="group overflow-hidden bg-black border-primary/20 hover:border-primary/40 transition-all duration-300">
+                  <div className="aspect-[3/4] overflow-hidden bg-black">
                     <img
                       src={perfume.image}
                       alt={perfume.name}
