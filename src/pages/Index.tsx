@@ -192,24 +192,60 @@ const Index = () => {
 
       <main className="pt-20">
         {activeSection === 'home' && (
-          <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background z-0" />
-            <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in">
-              <h2 className="text-6xl md:text-8xl font-heading font-bold mb-6 tracking-wide">
-                Essence of Luxury
-              </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Откройте мир изысканных ароматов
-              </p>
-              <Button
-                size="lg"
-                className="text-lg px-8"
-                onClick={() => setActiveSection('catalog')}
-              >
-                Исследовать коллекцию
-              </Button>
-            </div>
-          </section>
+          <>
+            <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background z-0" />
+              <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in">
+                <h2 className="text-6xl md:text-8xl font-heading font-bold mb-6 tracking-wide">
+                  Essence of Luxury
+                </h2>
+                <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                  Откройте мир изысканных ароматов
+                </p>
+                <Button
+                  size="lg"
+                  className="text-lg px-8"
+                  onClick={() => setActiveSection('catalog')}
+                >
+                  Исследовать коллекцию
+                </Button>
+              </div>
+            </section>
+
+            <section className="container mx-auto px-4 py-16 animate-fade-in">
+              <div className="grid md:grid-cols-3 gap-8">
+                <Card className="group overflow-hidden bg-card hover:bg-card/80 transition-all duration-300">
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src="https://cdn.poehali.dev/files/a2598469-b359-4175-a5cc-959fafd64beb.jpg"
+                      alt="Selection Market Pink"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </Card>
+
+                <Card className="group overflow-hidden bg-card hover:bg-card/80 transition-all duration-300">
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src="https://cdn.poehali.dev/files/7ef907ba-185d-470f-a8af-bedef28643f3.jpg"
+                      alt="Selection Market Purple"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </Card>
+
+                <Card className="group overflow-hidden bg-card hover:bg-card/80 transition-all duration-300">
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src="https://cdn.poehali.dev/files/dc96b04e-23a8-4d47-84af-3d40e34405b6.jpeg"
+                      alt="Selection Market Red"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </Card>
+              </div>
+            </section>
+          </>
         )}
 
         {activeSection === 'catalog' && (
