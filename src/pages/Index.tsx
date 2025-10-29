@@ -203,84 +203,80 @@ const Index = () => {
       <main className="pt-20">
         {activeSection === 'home' && (
           <>
-            <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
-              <div className="absolute inset-0 opacity-20">
-                <img
-                  src="https://cdn.poehali.dev/projects/019c344b-4df8-4481-9c5c-24e3db30b04c/files/7ca12082-3940-4cc9-9892-1401a47fa41f.jpg"
-                  alt="Abstract Background"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="absolute top-20 left-10 w-32 h-32 opacity-30 animate-fade-in">
-                <img
-                  src="https://cdn.poehali.dev/projects/019c344b-4df8-4481-9c5c-24e3db30b04c/files/ab11411c-370f-4ce0-a9af-2feb0543b906.jpg"
-                  alt="Perfume Decoration"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-
-              <div className="absolute bottom-20 right-10 w-40 h-40 opacity-30 animate-fade-in">
-                <img
-                  src="https://cdn.poehali.dev/projects/019c344b-4df8-4481-9c5c-24e3db30b04c/files/ab11411c-370f-4ce0-a9af-2feb0543b906.jpg"
-                  alt="Perfume Decoration"
-                  className="w-full h-full object-contain transform scale-x-[-1]"
-                />
+            <section className="relative h-screen flex items-center overflow-hidden">
+              <div className="absolute inset-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-card" />
+                <div className="absolute top-0 left-0 w-full h-full opacity-10">
+                  <div className="absolute top-20 left-20 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+                  <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+                </div>
               </div>
 
               <div className="container mx-auto px-4 relative z-10">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                  <div className="text-left animate-fade-in">
-                    <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 tracking-wide text-white">
-                      Essence of Luxury
-                    </h2>
-                    <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg">
-                      Откройте мир изысканных ароматов в фирменной упаковке SELECTION MARKET
-                    </p>
+                <div className="text-center max-w-5xl mx-auto">
+                  <div className="mb-8 animate-fade-in">
+                    <div className="inline-block">
+                      <div className="w-24 h-24 mx-auto mb-6">
+                        <svg viewBox="0 0 100 100" className="w-full h-full text-primary drop-shadow-2xl">
+                          <path d="M30,50 Q40,25 50,25 Q60,25 70,50" stroke="currentColor" strokeWidth="2" fill="none"/>
+                          <line x1="50" y1="25" x2="50" y2="75" stroke="currentColor" strokeWidth="2"/>
+                          <line x1="30" y1="75" x2="70" y2="75" stroke="currentColor" strokeWidth="3"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h2 className="text-7xl md:text-9xl font-heading font-bold mb-8 tracking-wider text-white animate-fade-in">
+                    SELECTION
+                  </h2>
+                  
+                  <p className="text-2xl md:text-3xl text-primary mb-4 tracking-widest animate-fade-in font-heading">
+                    Essence of Luxury
+                  </p>
+
+                  <p className="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto animate-fade-in">
+                    Откройте мир изысканных ароматов. Каждый флакон — произведение парфюмерного искусства
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
                     <Button
                       size="lg"
-                      className="text-lg px-8"
+                      className="text-lg px-12 py-6"
                       onClick={() => setActiveSection('catalog')}
                     >
                       Исследовать коллекцию
                     </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="text-lg px-12 py-6 border-primary hover:bg-primary hover:text-primary-foreground"
+                      onClick={() => setActiveSection('catalog')}
+                    >
+                      Заказать пробники
+                    </Button>
                   </div>
 
-                  <div className="relative animate-scale-in flex items-center justify-center">
-                    <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-                    <div className="relative group">
-                      <div className="relative w-48 h-80 flex flex-col items-center justify-end">
-                        <div className="absolute top-0 w-12 h-16 bg-gradient-to-b from-primary via-primary/80 to-transparent rounded-t-lg shadow-lg z-10" />
-                        <div className="absolute top-14 w-10 h-3 bg-card border-2 border-primary/50 rounded-sm z-10" />
-                        
-                        <div className="relative w-32 h-56 bg-gradient-to-br from-black via-card to-black rounded-lg shadow-2xl border border-primary/30 flex flex-col items-center justify-center p-6 group-hover:shadow-primary/50 transition-all duration-500">
-                          <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent rounded-lg" />
-                          
-                          <div className="relative z-10 text-center">
-                            <div className="w-12 h-12 mx-auto mb-4">
-                              <svg viewBox="0 0 100 100" className="w-full h-full text-primary drop-shadow-lg">
-                                <path d="M30,45 Q40,25 50,25 Q60,25 70,45 L65,70 L35,70 Z" fill="currentColor" opacity="0.3" stroke="currentColor" strokeWidth="1.5"/>
-                                <line x1="35" y1="70" x2="65" y2="70" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
-                              </svg>
-                            </div>
-                            
-                            <div className="space-y-1">
-                              <h3 className="text-xl font-heading font-bold text-white tracking-[0.3em]">SELECTION</h3>
-                              <div className="w-16 h-px bg-primary/50 mx-auto" />
-                              <p className="text-[10px] text-primary tracking-widest font-medium">LUXURY FRAGRANCE</p>
-                            </div>
-                          </div>
-                          
-                          <div className="absolute bottom-4 text-center">
-                            <p className="text-xs text-muted-foreground tracking-wider">5 ML</p>
-                          </div>
-                        </div>
-                        
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent rounded-lg pointer-events-none" />
-                      </div>
+                  <div className="mt-16 flex justify-center gap-8 items-center animate-fade-in">
+                    <div className="text-center">
+                      <p className="text-3xl font-heading font-bold text-white mb-1">5 ML</p>
+                      <p className="text-sm text-muted-foreground">Пробники</p>
+                    </div>
+                    <div className="w-px h-12 bg-border" />
+                    <div className="text-center">
+                      <p className="text-3xl font-heading font-bold text-white mb-1">50 ML</p>
+                      <p className="text-sm text-muted-foreground">Флаконы</p>
+                    </div>
+                    <div className="w-px h-12 bg-border" />
+                    <div className="text-center">
+                      <p className="text-3xl font-heading font-bold text-white mb-1">24/7</p>
+                      <p className="text-sm text-muted-foreground">Доставка</p>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <Icon name="ChevronDown" size={32} className="text-primary/50" />
               </div>
             </section>
 
