@@ -238,25 +238,36 @@ const Index = () => {
 
                   <div className="relative animate-scale-in flex items-center justify-center">
                     <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-                    <div className="relative">
-                      <div className="w-64 h-96 bg-gradient-to-b from-card to-black/50 rounded-3xl shadow-2xl flex flex-col items-center justify-center p-8 border border-primary/30">
-                        <div className="w-16 h-32 bg-gradient-to-b from-primary to-primary/70 rounded-lg mb-8 shadow-lg" />
-                        <div className="text-center">
-                          <div className="mb-4">
-                            <div className="w-16 h-16 mx-auto mb-2">
-                              <svg viewBox="0 0 100 100" className="w-full h-full text-primary">
-                                <path d="M20,50 Q30,30 50,30 Q70,30 80,50" stroke="currentColor" strokeWidth="2" fill="none"/>
-                                <line x1="50" y1="30" x2="50" y2="70" stroke="currentColor" strokeWidth="2"/>
-                                <line x1="30" y1="70" x2="70" y2="70" stroke="currentColor" strokeWidth="3"/>
+                    <div className="relative group">
+                      <div className="relative w-48 h-80 flex flex-col items-center justify-end">
+                        <div className="absolute top-0 w-12 h-16 bg-gradient-to-b from-primary via-primary/80 to-transparent rounded-t-lg shadow-lg z-10" />
+                        <div className="absolute top-14 w-10 h-3 bg-card border-2 border-primary/50 rounded-sm z-10" />
+                        
+                        <div className="relative w-32 h-56 bg-gradient-to-br from-black via-card to-black rounded-lg shadow-2xl border border-primary/30 flex flex-col items-center justify-center p-6 group-hover:shadow-primary/50 transition-all duration-500">
+                          <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent rounded-lg" />
+                          
+                          <div className="relative z-10 text-center">
+                            <div className="w-12 h-12 mx-auto mb-4">
+                              <svg viewBox="0 0 100 100" className="w-full h-full text-primary drop-shadow-lg">
+                                <path d="M30,45 Q40,25 50,25 Q60,25 70,45 L65,70 L35,70 Z" fill="currentColor" opacity="0.3" stroke="currentColor" strokeWidth="1.5"/>
+                                <line x1="35" y1="70" x2="65" y2="70" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
                               </svg>
                             </div>
+                            
+                            <div className="space-y-1">
+                              <h3 className="text-xl font-heading font-bold text-white tracking-[0.3em]">SELECTION</h3>
+                              <div className="w-16 h-px bg-primary/50 mx-auto" />
+                              <p className="text-[10px] text-primary tracking-widest font-medium">LUXURY FRAGRANCE</p>
+                            </div>
                           </div>
-                          <h3 className="text-2xl font-heading font-bold text-white mb-2 tracking-widest">SELECTION</h3>
-                          <p className="text-xs text-primary tracking-wider">LUXURY FRAGRANCE</p>
-                          <p className="text-xs text-muted-foreground mt-2">2 ML</p>
+                          
+                          <div className="absolute bottom-4 text-center">
+                            <p className="text-xs text-muted-foreground tracking-wider">5 ML</p>
+                          </div>
                         </div>
+                        
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent rounded-lg pointer-events-none" />
                       </div>
-                      <div className="absolute -right-2 top-1/2 w-8 h-24 bg-gradient-to-r from-primary/30 to-transparent rounded-r-lg" />
                     </div>
                   </div>
                 </div>
