@@ -193,29 +193,58 @@ const Index = () => {
       <main className="pt-20">
         {activeSection === 'home' && (
           <>
-            <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0">
+            <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
+              <div className="absolute inset-0 opacity-20">
                 <img
-                  src="https://cdn.poehali.dev/files/dc96b04e-23a8-4d47-84af-3d40e34405b6.jpeg"
-                  alt="Selection Background"
+                  src="https://cdn.poehali.dev/projects/019c344b-4df8-4481-9c5c-24e3db30b04c/files/7ca12082-3940-4cc9-9892-1401a47fa41f.jpg"
+                  alt="Abstract Background"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/40" />
               </div>
-              <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in">
-                <h2 className="text-6xl md:text-8xl font-heading font-bold mb-6 tracking-wide text-white">
-                  Essence of Luxury
-                </h2>
-                <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Откройте мир изысканных ароматов
-                </p>
-                <Button
-                  size="lg"
-                  className="text-lg px-8"
-                  onClick={() => setActiveSection('catalog')}
-                >
-                  Исследовать коллекцию
-                </Button>
+
+              <div className="absolute top-20 left-10 w-32 h-32 opacity-30 animate-fade-in">
+                <img
+                  src="https://cdn.poehali.dev/projects/019c344b-4df8-4481-9c5c-24e3db30b04c/files/ab11411c-370f-4ce0-a9af-2feb0543b906.jpg"
+                  alt="Perfume Decoration"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              <div className="absolute bottom-20 right-10 w-40 h-40 opacity-30 animate-fade-in">
+                <img
+                  src="https://cdn.poehali.dev/projects/019c344b-4df8-4481-9c5c-24e3db30b04c/files/ab11411c-370f-4ce0-a9af-2feb0543b906.jpg"
+                  alt="Perfume Decoration"
+                  className="w-full h-full object-contain transform scale-x-[-1]"
+                />
+              </div>
+
+              <div className="container mx-auto px-4 relative z-10">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div className="text-left animate-fade-in">
+                    <h2 className="text-5xl md:text-7xl font-heading font-bold mb-6 tracking-wide text-white">
+                      Essence of Luxury
+                    </h2>
+                    <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg">
+                      Откройте мир изысканных ароматов в фирменной упаковке SELECTION MARKET
+                    </p>
+                    <Button
+                      size="lg"
+                      className="text-lg px-8"
+                      onClick={() => setActiveSection('catalog')}
+                    >
+                      Исследовать коллекцию
+                    </Button>
+                  </div>
+
+                  <div className="relative animate-scale-in">
+                    <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
+                    <img
+                      src="https://cdn.poehali.dev/files/dc96b04e-23a8-4d47-84af-3d40e34405b6.jpeg"
+                      alt="Selection Market Box"
+                      className="relative w-full max-w-lg mx-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
               </div>
             </section>
 
