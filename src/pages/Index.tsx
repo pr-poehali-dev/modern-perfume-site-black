@@ -85,7 +85,7 @@ const Index = () => {
       <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-heading font-bold tracking-wider">NOIR</h1>
+            <h1 className="text-3xl font-heading font-bold tracking-wider">SELECTION</h1>
             
             <nav className="hidden md:flex gap-8">
               {navigation.map((item) => (
@@ -284,7 +284,7 @@ const Index = () => {
             <h2 className="text-5xl font-heading font-bold mb-8 text-center">О бренде</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                NOIR — это воплощение роскоши и элегантности в мире парфюмерии. Мы создаем ароматы для тех, кто ценит изысканность и индивидуальность.
+                SELECTION — это воплощение роскоши и элегантности в мире парфюмерии. Мы создаем ароматы для тех, кто ценит изысканность и индивидуальность.
               </p>
               <p>
                 Каждый наш парфюм — результат кропотливой работы лучших парфюмеров Европы. Мы используем только натуральные ингредиенты высочайшего качества.
@@ -386,7 +386,7 @@ const Index = () => {
                     <Icon name="Mail" size={20} className="text-primary mt-1" />
                     <div>
                       <p className="font-medium mb-1">Email</p>
-                      <p className="text-muted-foreground">info@noir-perfume.ru</p>
+                      <p className="text-muted-foreground">info@selection-perfume.ru</p>
                     </div>
                   </div>
                 </CardContent>
@@ -415,7 +415,7 @@ const Index = () => {
       <footer className="border-t border-border mt-20">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">© 2024 NOIR. Все права защищены.</p>
+            <p className="text-muted-foreground text-sm">© 2024 SELECTION. Все права защищены.</p>
             <div className="flex gap-6">
               <Button variant="ghost" size="icon">
                 <Icon name="Instagram" size={20} />
