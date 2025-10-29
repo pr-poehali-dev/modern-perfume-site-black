@@ -92,18 +92,34 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+      <header className="fixed top-0 w-full bg-black/95 backdrop-blur-sm border-b border-primary/20 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-heading font-bold tracking-wider">SELECTION</h1>
+            <button 
+              onClick={() => setActiveSection('home')}
+              className="flex items-center gap-3 group cursor-pointer"
+            >
+              <div className="w-8 h-8">
+                <svg viewBox="0 0 100 100" className="w-full h-full text-primary drop-shadow-lg group-hover:scale-110 transition-transform">
+                  <path d="M30,50 Q40,25 50,25 Q60,25 70,50" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <line x1="50" y1="25" x2="50" y2="75" stroke="currentColor" strokeWidth="2"/>
+                  <line x1="30" y1="75" x2="70" y2="75" stroke="currentColor" strokeWidth="3"/>
+                </svg>
+              </div>
+              <h1 className="text-2xl font-heading font-bold tracking-[0.3em] text-white group-hover:text-primary transition-colors">
+                SELECTION
+              </h1>
+            </button>
             
-            <nav className="hidden md:flex gap-8">
+            <nav className="hidden lg:flex gap-1">
               {navigation.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setActiveSection(item.id)}
-                  className={`text-sm tracking-wide transition-colors ${
-                    activeSection === item.id ? 'text-primary' : 'text-foreground hover:text-primary'
+                  className={`px-4 py-2 text-sm tracking-wide transition-all rounded-lg ${
+                    activeSection === item.id 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'text-white hover:bg-primary/10 hover:text-primary'
                   }`}
                 >
                   {item.label}
