@@ -236,13 +236,28 @@ const Index = () => {
                     </Button>
                   </div>
 
-                  <div className="relative animate-scale-in">
+                  <div className="relative animate-scale-in flex items-center justify-center">
                     <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-                    <img
-                      src="https://cdn.poehali.dev/files/dc96b04e-23a8-4d47-84af-3d40e34405b6.jpeg"
-                      alt="Selection Market Box"
-                      className="relative w-full max-w-lg mx-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
-                    />
+                    <div className="relative">
+                      <div className="w-64 h-96 bg-gradient-to-b from-card to-black/50 rounded-3xl shadow-2xl flex flex-col items-center justify-center p-8 border border-primary/30">
+                        <div className="w-16 h-32 bg-gradient-to-b from-primary to-primary/70 rounded-lg mb-8 shadow-lg" />
+                        <div className="text-center">
+                          <div className="mb-4">
+                            <div className="w-16 h-16 mx-auto mb-2">
+                              <svg viewBox="0 0 100 100" className="w-full h-full text-primary">
+                                <path d="M20,50 Q30,30 50,30 Q70,30 80,50" stroke="currentColor" strokeWidth="2" fill="none"/>
+                                <line x1="50" y1="30" x2="50" y2="70" stroke="currentColor" strokeWidth="2"/>
+                                <line x1="30" y1="70" x2="70" y2="70" stroke="currentColor" strokeWidth="3"/>
+                              </svg>
+                            </div>
+                          </div>
+                          <h3 className="text-2xl font-heading font-bold text-white mb-2 tracking-widest">SELECTION</h3>
+                          <p className="text-xs text-primary tracking-wider">LUXURY FRAGRANCE</p>
+                          <p className="text-xs text-muted-foreground mt-2">2 ML</p>
+                        </div>
+                      </div>
+                      <div className="absolute -right-2 top-1/2 w-8 h-24 bg-gradient-to-r from-primary/30 to-transparent rounded-r-lg" />
+                    </div>
                   </div>
                 </div>
               </div>
