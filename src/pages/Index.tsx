@@ -276,7 +276,7 @@ const Index = () => {
 
             <section className="container mx-auto px-4 py-16 animate-fade-in">
               <div className="grid md:grid-cols-3 gap-8">
-                <Card className="group overflow-hidden bg-card hover:bg-card/80 transition-all duration-300">
+                <Card className="group overflow-hidden bg-black border-primary/20 hover:border-primary/40 transition-all duration-300">
                   <div className="aspect-square overflow-hidden">
                     <img
                       src="https://cdn.poehali.dev/files/a2598469-b359-4175-a5cc-959fafd64beb.jpg"
@@ -286,7 +286,7 @@ const Index = () => {
                   </div>
                 </Card>
 
-                <Card className="group overflow-hidden bg-card hover:bg-card/80 transition-all duration-300">
+                <Card className="group overflow-hidden bg-black border-primary/20 hover:border-primary/40 transition-all duration-300">
                   <div className="aspect-square overflow-hidden">
                     <img
                       src="https://cdn.poehali.dev/files/7ef907ba-185d-470f-a8af-bedef28643f3.jpg"
@@ -296,7 +296,7 @@ const Index = () => {
                   </div>
                 </Card>
 
-                <Card className="group overflow-hidden bg-card hover:bg-card/80 transition-all duration-300">
+                <Card className="group overflow-hidden bg-black border-primary/20 hover:border-primary/40 transition-all duration-300">
                   <div className="aspect-square overflow-hidden">
                     <img
                       src="https://cdn.poehali.dev/files/dc96b04e-23a8-4d47-84af-3d40e34405b6.jpeg"
