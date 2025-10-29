@@ -194,12 +194,19 @@ const Index = () => {
         {activeSection === 'home' && (
           <>
             <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background z-0" />
+              <div className="absolute inset-0">
+                <img
+                  src="https://cdn.poehali.dev/files/dc96b04e-23a8-4d47-84af-3d40e34405b6.jpeg"
+                  alt="Selection Background"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40" />
+              </div>
               <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in">
-                <h2 className="text-6xl md:text-8xl font-heading font-bold mb-6 tracking-wide">
+                <h2 className="text-6xl md:text-8xl font-heading font-bold mb-6 tracking-wide text-white">
                   Essence of Luxury
                 </h2>
-                <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
                   Откройте мир изысканных ароматов
                 </p>
                 <Button
